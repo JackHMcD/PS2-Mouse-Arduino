@@ -168,6 +168,9 @@ int16_t * PS2Mouse::report(int16_t data[]) {
   data[0] = read(); // Status bit
   data[1] = read_movement_x(data[0]); // X Movement Packet
   data[2] = read_movement_y(data[0]); // Y Movement Packet
+  data[3] = read_absolute_x(data[0]); // X Movement Packet
+  data[4] = read_absolute_y(data[0]); // Y Movement Packet
+  data[5] = read_absolute_z(data[0]); // Y Movement Packet
   return data;
 }
 
