@@ -33,5 +33,11 @@ void loop()
   Serial.print(data[1]); // X Movement Data
   Serial.print(",");
   Serial.print(data[2]); // Y Movement Data
+  Serial.print(",");
+  Serial.print(data[3]); // X Absolute Data
+  Serial.print(",");
+  Serial.print(data[4]); // Y Absolute Data
+  Serial.print(",");
+  Serial.print(data[5]); // Z Absolute Data
   Serial.println();
 }
