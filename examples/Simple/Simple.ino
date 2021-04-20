@@ -7,8 +7,8 @@
  */
 
 #include <PS2Mouse.h>
-#define MOUSE_DATA 5
-#define MOUSE_CLOCK 6
+#define MOUSE_DATA 4
+#define MOUSE_CLOCK 3
 
 PS2Mouse mouse(MOUSE_CLOCK, MOUSE_DATA, STREAM);
 
@@ -17,7 +17,7 @@ PS2Mouse mouse(MOUSE_CLOCK, MOUSE_DATA, STREAM);
  */
 void setup()
 {
-  Serial.begin(38400);
+  Serial.begin(9600);
   mouse.initialize();
 }
 
@@ -26,6 +26,7 @@ void setup()
  */
 void loop()
 {
+  delay(100);
   int16_t data[3];
   mouse.report(data);
   Serial.print(data[0]); // Status Byte
