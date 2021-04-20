@@ -17,6 +17,8 @@ class PS2Mouse
     int read_bit();
     int16_t read_movement_x(int);
     int16_t read_movement_y(int);
+    int16_t read_absolute_x(int);
+    int16_t read_absolute_y(int);
     void pull_high(int);
     void pull_low(int);
     void set_mode(int);
